@@ -1,0 +1,45 @@
+.millionaire_end {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+.millionaire_end svg{
+    width: 100%;
+}
+
+.millionaire_end_banner {
+    display: flex;
+    justify-content: center;
+    place-self: flex-end;
+    width: 50%;
+    height: 100vh;
+    margin-right: 100px;
+}
+
+.millionaire_end_earnings {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 100vh;
+}
+
+.millionaire_end_earnings h2 {
+    color: #1C1C21;
+    opacity: .5;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.millionaire_end_earnings h1 {
+    color: #1C1C21;
+    font-size: 56px;
+    white-space: nowrap;
+    margin: 0 0 64px 0;
+}

@@ -1,0 +1,78 @@
+.millionaire_chance {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.millionaire_chance_controls {
+    /*grid-area: 1 / 1 / 6 / 5;*/
+    background-color: #F5F5F7;
+}
+
+.millionaire_chance_prize {
+    /*grid-area: 1 / 5 / 6 / 6;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.millionaire_chance_prize_list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0 0 0px 0;
+    padding: 0;
+    color: black;
+
+}
+
+.millionaire_chance_prize_list_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #1C1C21;
+    z-index: 100;
+    background-size: cover;
+    background: url("../../assets/svg/PrizeBorder.svg") no-repeat center;
+    margin-bottom: 8px;
+    transition: all .3s ease-out;
+}
+
+.millionaire_chance_prize_list_item:hover {
+    background: url("../../assets/svg/PrizeBorderHover.svg") no-repeat center;
+    transition: all .3s ease-out;
+    color: #FF8B37;
+}
+
+.prize_item_disabled {
+    background: url("../../assets/svg/PrizeBorder.svg") no-repeat center;
+    color: #D0D0D8 !important;
+    cursor: not-allowed;
+}
+.prize_item_disabled:hover {
+    background: url("../../assets/svg/PrizeBorder.svg") no-repeat center;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .millionaire_chance_prize {
+        display: none;
+    }
+
+    .millionaire_chance {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+
+}

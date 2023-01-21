@@ -1,0 +1,175 @@
+@keyframes correct_answer {
+    0%, 22%, 44% {
+        background: url("../../../assets/svg/AnswerBorderSelected.svg") no-repeat center ;
+        color: black;
+    }
+    20%, 40%, 60% {
+        background: url("../../../assets/svg/AnswerBorder.svg") no-repeat center;
+        color: #e87928;
+    }
+    62%, 100% {
+        background: url("../../../assets/svg/AnswerBorderCorrect.svg") no-repeat center;
+        color: #47D867;
+    }
+}
+
+@keyframes wrong_answer {
+    0%, 22%, 44% {
+        background: url("../../../assets/svg/AnswerBorderSelected.svg") no-repeat center ;
+    }
+    20%, 40%, 60% {
+        background: url("../../../assets/svg/AnswerBorder.svg") no-repeat center;
+    }
+    62%, 100% {
+        background: url("../../../assets/svg/AnswerBorderWrong.svg") no-repeat center;
+    }
+}
+
+
+.millionaire_chance_control_question {
+    display: flex;
+    height: 50vh;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.millionaire_chance_control_question h1 {
+    width: 50%;
+    text-align: left;
+    margin-left: 80px;
+    margin-top: 133px;
+}
+
+.millionaire_chance_control_answers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50vh;
+    padding-left: 80px;
+}
+
+.millionaire_chance_control_answers_list {
+    width: 910px;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.millionaire_chance_control_answers_list_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 405px;
+    height: 75px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: url("../../../assets/svg/AnswerBorder.svg") no-repeat center;
+    transition: all .3s ease-out;
+}
+
+.millionaire_chance_control_answers_list_item span {
+    width: 100%;
+    padding: 0 30px 0 70px;
+    text-align: left;
+}
+
+.millionaire_chance_control_answers_list_item:hover {
+    background: url("../../../assets/svg/AnswerBorderHover.svg") no-repeat center;
+    transition: all .3s ease-out;
+    color: #e87928;
+}
+
+.millionaire_chance_control_answers_list_item_selected {
+    background: url("../../../assets/svg/AnswerBorderSelected.svg") no-repeat center !important;
+    transition: all .3s ease-out;
+    color: #e87928;
+}
+
+.wrong {
+    background: url("../../../assets/svg/AnswerBorderWrong.svg") no-repeat center ;
+    animation: wrong_answer 3s ease forwards;
+    /*color: #1C1C21 !important;*/
+}
+
+.correct {
+    background: url("../../../assets/svg/AnswerBorderCorrect.svg") no-repeat center;
+    animation: correct_answer 3s ease forwards;
+    /*color: #47D867 !important;*/
+}
+
+.millionaire_chance_control_answers_list_item_text {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0 40px;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .millionaire_chance_control_question {
+        font-size: 18px;
+    }
+
+    .millionaire_chance_control_answers {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .millionaire_chance_control_answers_list_item {
+        background: url("../../../assets/svg/AnswerBorderMobile.svg") no-repeat center;
+        background-size: contain;
+        transition: all .3s ease-out;
+        margin-bottom: 8px;
+        width: 100%;
+        height: 75px;
+    }
+
+    .millionaire_chance_control_answers_list_item:hover {
+        background: url("../../../assets/svg/AnswerBorderMobile.svg") no-repeat center;
+        background-size: contain;
+    }
+
+    .millionaire_chance_control_answers_list_item_selected {
+        background: url("../../../assets/svg/AnswerBorderMobileSelected.svg") no-repeat center;
+        background-size: contain;
+    }
+
+    .wrong {
+        background-size: contain;
+    }
+
+    .correct {
+        background-size: contain;
+    }
+
+    .millionaire_chance_control_answers_list {
+        margin: 0;
+        padding: 0 0 24px 0;
+        font-size: 14px;
+    }
+
+    .millionaire_chance_control_answers {
+        align-items: flex-end;
+    }
+
+
+    .millionaire_chance_control_question h1 {
+        width: 90%;
+        font-size: 18px;
+        text-align:  center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .millionaire_chance_control_question {
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+}
+
